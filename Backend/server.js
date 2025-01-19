@@ -14,9 +14,9 @@ app.use("/api/products",productRoutes)
 //everything in the route file will be prefixed with /api/products
 //this really helps clean the server.js file and makes it more readable
 if (process.env.NODE_ENV === 'production'){
-    app.use(express.static(path.join(__dirname, '/frontend/mern-frontend/dist')));
+    app.use(express.static(path.join(__dirname, '/Frontend/mern-frontend/dist')));
 
-    app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'frontend', 'mern-frontend', 'dist', 'index.html')))
+    app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'Frontend', 'mern-frontend', 'dist', 'index.html')))
 }
 //most important RESTful API endpoints include GET, POST, PUT, DELETE
 app.listen(5000, () =>{
